@@ -1,0 +1,38 @@
+.login {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #c50206;
+  height: auto;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  overflow-y: auto;
+  padding-top: 45px;
+}
+.logo-wrap {
+  margin: .6rem auto;
+  width: 4rem;
+  img {
+    display: block;
+  }
+}
+
+.form {
+  width: 6rem;
+  margin: 0 auto;
+  .input-wrap {
+    margin-bottom: 20px;
+    input {
+      background: #c50206;
+      width: 100%;
+      border: 1px solid #ff0;
+      border-radius: 5px;
+      padding: 14px 5px;
+      line-height: 16px;
+      font-size: 14px;
+      color: #fff;
+    }
+  }
+}
