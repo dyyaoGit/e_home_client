@@ -21,7 +21,7 @@
         return this.$route.meta.title
       },
       isShow() {
-        if(this.$route.name === "login"){
+        if(this.$route.name === "login"||this.$route.name == "bdmap"){
           return false
         }
         else{
@@ -30,7 +30,7 @@
       }
     },
     mounted() {
-
+      console.log(this.$route)
     }
   }
 </script>

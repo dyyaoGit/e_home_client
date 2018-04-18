@@ -14,12 +14,24 @@
     },
     methods: {
       initMap() {
-        this.map = new BMap.Map('bd');
-// 创建地图实例
-        var point = new BMap.Point(116.404, 39.915);
-// 创建点坐标
-        this.map.centerAndZoom(point, 7);
-// 初始化地图， 设置中心点坐标和地图级别
+        var map = new BMap.Map("bd");    // 创建Map实例
+        map.centerAndZoom(new BMap.Point(108.394767,22.794653), 15);  // 初始化地图,设置中心点坐标和地图级别
+        //添加地图类型控件
+        map.addControl(new BMap.MapTypeControl({
+          mapTypes:[
+            BMAP_NORMAL_MAP,
+            BMAP_HYBRID_MAP
+          ]}));
+        map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+        var top_right_navigation = new BMap.NavigationControl({anchor: BMAP_ANCHOR_TOP_RIGHT, type: BMAP_NAVIGATION_CONTROL_ZOOM, offset: new BMap.Size(20, 60)});
+        var marker = new BMap.Marker(new BMap.Point(108.394767,22.794653));
+        map.addOverlay(marker);              // 将标注添加到地图中
+        var label = new BMap.Label("我是文字标注哦",{offset:new BMap.Size(20,-10)});
+        marker.setLabel(label);
+        var geolocationControl = new BMap.GeolocationControl();
+        map.addControl(geolocationControl)
+        map.addControl(top_right_navigation);
       }
     },
     created() {

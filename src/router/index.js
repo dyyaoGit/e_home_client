@@ -19,7 +19,6 @@ export default new Router({
       },
       component: () => import("@/views/login"),
       hiddenTabs: true
-
     },
     {
       path: "/map",
@@ -27,6 +26,7 @@ export default new Router({
       meta: {
         title: "流动党员找组织",
       },
+      hidden: true,
       component: () => import("@/views/map")
     }
   ]
