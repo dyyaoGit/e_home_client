@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
+import $axios from './util/$axios';
 
 Vue.use(MintUI)
 

@@ -20,6 +20,14 @@ export default new Router({
       component: () => import("@/views/login"),
       hiddenTabs: true
 
+    },
+    {
+      path: "/map",
+      name: "bdmap",
+      meta: {
+        title: "流动党员找组织",
+      },
+      component: () => import("@/views/map")
     }
   ]
 })

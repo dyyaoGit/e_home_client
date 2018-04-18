@@ -102,7 +102,7 @@
 </template>
 
 <script>
-  import axios from 'axios'
+  // import axios from 'axios'
   import {swiper, swiperSlide} from 'vue-awesome-swiper'
 
   // require styles
@@ -125,7 +125,10 @@
     },
     methods: {
       getSlider() {
-        axios.get("http://211.67.177.56:8080/hhdj/carousel/carouselList.do?type=0").then(res => {
+        // axios.get("http://211.67.177.56:8080/hhdj/carousel/carouselList.do?type=0").then(res => {
+        //   this.slider = res.data.rows;
+        // })
+        this.$axios.get("getNews").then(res => {
           this.slider = res.data.rows;
         })
       }
