@@ -28,6 +28,21 @@ export default new Router({
       },
       hidden: true,
       component: () => import("@/views/map")
+    },
+    {
+      path: '/test',
+      name: "test",
+      component: () => import("@/views/test")
+    },
+    {
+      path: "/ajaxUp",
+      name: "up",
+      component: () => import("@/views/ajaxUp")
+    },
+    {
+      path: "/qiniuSDK",
+      name: "SDK",
+      component: ()=> import("@/views/qiniuSDK")
     }
   ]
 })

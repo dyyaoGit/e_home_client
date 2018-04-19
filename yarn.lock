@@ -1485,6 +1485,10 @@ copy-webpack-plugin@^4.0.1:
     p-limit "^1.0.0"
     serialize-javascript "^1.4.0"
 
+core-image-xhr@^1.0.3:
+  version "1.0.3"
+  resolved "http://registry.npm.taobao.org/core-image-xhr/download/core-image-xhr-1.0.3.tgz#9211d7b5c41219af5ab69b9384ca2a47d572b476"
+
 core-js@^2.4.0, core-js@^2.5.0:
   version "2.5.5"
   resolved "http://registry.npm.taobao.org/core-js/download/core-js-2.5.5.tgz#b14dde936c640c0579a6b50cabcc132dd6127e3b"
@@ -1697,6 +1701,10 @@ dashdash@^1.12.0:
 date-now@^0.1.4:
   version "0.1.4"
   resolved "http://registry.npm.taobao.org/date-now/download/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
+
+daycaca@^0.1.1:
+  version "0.1.2"
+  resolved "http://registry.npm.taobao.org/daycaca/download/daycaca-0.1.2.tgz#45dab5c72246cc4aa48399117e3c7debc6190ee6"
 
 de-indent@^1.0.2:
   version "1.0.2"
@@ -5934,6 +5942,16 @@ vue-awesome-swiper@2.6.7:
   dependencies:
     swiper "^3.4.2"
 
+vue-core-image-upload@^2.4.5:
+  version "2.4.5"
+  resolved "http://registry.npm.taobao.org/vue-core-image-upload/download/vue-core-image-upload-2.4.5.tgz#3f81f4a38420f159750eb4c7b9b914ad7a42e296"
+  dependencies:
+    babel-core "^6.26.0"
+    babel-plugin-transform-es2015-spread "^6.22.0"
+    core-image-xhr "^1.0.3"
+    daycaca "^0.1.1"
+    vue "^2.5.13"
+
 vue-hot-reload-api@^2.2.0:
   version "2.3.0"
   resolved "http://registry.npm.taobao.org/vue-hot-reload-api/download/vue-hot-reload-api-2.3.0.tgz#97976142405d13d8efae154749e88c4e358cf926"
@@ -5982,7 +6000,7 @@ vue-template-es2015-compiler@^1.6.0:
   version "1.6.0"
   resolved "http://registry.npm.taobao.org/vue-template-es2015-compiler/download/vue-template-es2015-compiler-1.6.0.tgz#dc42697133302ce3017524356a6c61b7b69b4a18"
 
-vue@^2.5.2:
+vue@^2.5.13, vue@^2.5.2:
   version "2.5.16"
   resolved "http://registry.npm.taobao.org/vue/download/vue-2.5.16.tgz#07edb75e8412aaeed871ebafa99f4672584a0085"
 

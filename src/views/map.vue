@@ -14,24 +14,20 @@
     },
     methods: {
       initMap() {
-        var map = new BMap.Map("bd");    // 创建Map实例
-        map.centerAndZoom(new BMap.Point(108.394767,22.794653), 15);  // 初始化地图,设置中心点坐标和地图级别
-        //添加地图类型控件
-        map.addControl(new BMap.MapTypeControl({
-          mapTypes:[
-            BMAP_NORMAL_MAP,
-            BMAP_HYBRID_MAP
-          ]}));
-        map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
-        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+        var mp = new BMap.Map('bd');
+        mp.centerAndZoom(new BMap.Point(113.980795,22.540068), 19);
+
         var top_right_navigation = new BMap.NavigationControl({anchor: BMAP_ANCHOR_TOP_RIGHT, type: BMAP_NAVIGATION_CONTROL_ZOOM, offset: new BMap.Size(20, 60)});
-        var marker = new BMap.Marker(new BMap.Point(108.394767,22.794653));
-        map.addOverlay(marker);              // 将标注添加到地图中
-        var label = new BMap.Label("我是文字标注哦",{offset:new BMap.Size(20,-10)});
+        var marker = new BMap.Marker(new BMap.Point(113.980795,22.540068));
+        mp.addOverlay(marker); //声明一个标记点
+        var label = new BMap.Label("我是埃菲尔铁塔售票处",{offset:new BMap.Size(20,-10)});//声明一个文字标注
         marker.setLabel(label);
+
+
         var geolocationControl = new BMap.GeolocationControl();
-        map.addControl(geolocationControl)
-        map.addControl(top_right_navigation);
+        mp.addControl(geolocationControl);
+
+        mp.addControl(top_right_navigation);
       }
     },
     created() {
@@ -43,8 +39,6 @@
 </script>
 
 <style scoped>
-  html {height: 100%;}
-  body{height: 100%; margin: 0px; padding: 0px;}
 
 .map-wrap {
   position: fixed;
@@ -56,12 +50,6 @@
   width: 100%;
 }
   #bd {
-    z-index: 999;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     height: 100%;
     width: 100%;
   }

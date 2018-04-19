@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="https://upload-z1.qiniup.com" method="POST" enctype="multipart/form-data">
+  <input type="file" name="file">
+  <input type="text" name="token" value="" id="token">
+  <button type="submit">
+    提交
+  </button>
+</form>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+  var tokenInput = document.getElementById("token");
+
+  axios.get("http://up.yaojunrong.com/getToken").then(res => {
+      console.log(res.data.data)
+      tokenInput.value = res.data.data;
+  })
+</script>
+
+
+</html>
